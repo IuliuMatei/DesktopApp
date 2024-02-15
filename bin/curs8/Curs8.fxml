@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="847.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="curs8.FXMLDocumentController">
+   <children>
+      <TabPane prefHeight="655.0" prefWidth="847.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab_Client" text="Clienti">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="626.0" prefWidth="828.0">
+                     <children>
+                        <Label layoutX="41.0" layoutY="33.0" text="Datele din tabela clienti:" />
+                        <Button fx:id="buton_IncarcareClienti" layoutX="701.0" layoutY="29.0" mnemonicParsing="false" onAction="#incarcaClient" prefHeight="24.0" prefWidth="99.0" text="Incarcare clienti" />
+                        <TableView fx:id="tabela_Clienti" layoutX="41.0" layoutY="82.0" prefHeight="170.0" prefWidth="779.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_idClient" prefWidth="128.0" text="IdClient" />
+                            <TableColumn fx:id="atribut_NumeC" minWidth="3.0" prefWidth="118.0" text="Nume" />
+                              <TableColumn fx:id="atribut_PrenumeC" prefWidth="120.0" text="Prenume" />
+                              <TableColumn fx:id="atribut_AdresaC" prefWidth="127.0" text="Adresa" />
+                              <TableColumn fx:id="atribut_JudetC" prefWidth="146.0" text="Judet" />
+                              <TableColumn fx:id="atribut_CNPC" prefWidth="139.0" text="CNP" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="text_NumeC" layoutX="189.0" layoutY="313.0" prefHeight="26.0" prefWidth="126.0" promptText="Nume" />
+                        <TextField fx:id="text_PrenumeC" layoutX="335.0" layoutY="313.0" prefHeight="26.0" prefWidth="122.0" promptText="Prenume" />
+                        <TextField fx:id="text_Adresa" layoutX="473.0" layoutY="313.0" prefHeight="26.0" prefWidth="107.0" promptText="Adresa" />
+                        <TextField fx:id="text_Judet" layoutX="614.0" layoutY="313.0" prefHeight="26.0" prefWidth="111.0" promptText="Judet" />
+                        <TextField fx:id="text_CNP" layoutX="733.0" layoutY="313.0" prefHeight="26.0" prefWidth="99.0" promptText="CNP" />
+                        <Button fx:id="buton_adaugaClient" layoutX="180.0" layoutY="393.0" mnemonicParsing="false" onAction="#adaugaClienti" text="Adauga Clientul" />
+                        <TextField fx:id="text_IdClient" layoutX="58.0" layoutY="314.0" prefHeight="26.0" prefWidth="122.0" promptText="Id Client" />
+                        <Button fx:id="buton_stergeClient" layoutX="614.0" layoutY="393.0" mnemonicParsing="false" onAction="#stergeClient" text="Sterge Clientul" />
+                        <Button fx:id="buton_modificaClient" layoutX="379.0" layoutY="393.0" mnemonicParsing="false" onAction="#modificaClient" text="Modifica Client" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_CanaleTV" text="CanaleTV">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="55.0" layoutY="40.0" text="Datele din tabela CanaleTV" />
+                        <Button fx:id="buton_incarcareCanal" layoutX="673.0" layoutY="36.0" mnemonicParsing="false" onAction="#incarcaCanal" text="Incarca canale TV" />
+                        <TableView fx:id="tabela_Canale" layoutX="64.0" layoutY="94.0" prefHeight="169.0" prefWidth="700.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_IdCanal" prefWidth="161.60000610351562" text="IdCanal" />
+                            <TableColumn fx:id="atribut_NumeCa" prefWidth="172.79998779296875" text="NumeCanal" />
+                              <TableColumn fx:id="atribut_Tip" prefWidth="173.5999755859375" text="Tipulcanalului" />
+                              <TableColumn fx:id="atribut_Locatie" prefWidth="193.59991455078125" text="LocatiaCanalului" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="text_idCanal" layoutX="64.0" layoutY="321.0" promptText="Id Canal" />
+                        <TextField fx:id="text_NumeCa" layoutX="226.0" layoutY="321.0" promptText="Nume Canal" />
+                        <TextField fx:id="text_Tip" layoutX="398.0" layoutY="321.0" promptText="Tipul Canalului" />
+                        <TextField fx:id="text_Locatie" layoutX="578.0" layoutY="321.0" promptText="Locatia Canalului" />
+                        <Button fx:id="buton_adaugaCanal" layoutX="172.0" layoutY="401.0" mnemonicParsing="false" onAction="#adaugaCanal" text="Adauga Canal" />
+                        <Button fx:id="buton_modificaCanal" layoutX="372.0" layoutY="401.0" mnemonicParsing="false" onAction="#modificaCanal" text="Modifica Canal" />
+                        <Button fx:id="buton_stergeCanal" layoutX="547.0" layoutY="401.0" mnemonicParsing="false" onAction="#stergeCanal" text="Sterge Canal" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab_Abonament" text="Abonamente">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="39.0" layoutY="49.0" text="Datele din tabela Abonamente" />
+                        <Button fx:id="buton_incarcaAbonamente" layoutX="645.0" layoutY="54.0" mnemonicParsing="false" onAction="#incarcaAbonamente" text="Incarca abonamente" />
+                        <TableView fx:id="tabela_Abonamente" layoutX="39.0" layoutY="97.0" prefHeight="200.0" prefWidth="761.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_idAbonament" prefWidth="108.80004501342773" text="Id Abonament" />
+                            <TableColumn fx:id="atribut_NumeAb" prefWidth="140.8000030517578" text="Nume Abonament" />
+                              <TableColumn fx:id="atribut_iDClient" prefWidth="119.199951171875" text="Id Client" />
+                              <TableColumn fx:id="atribut_iDCanal" prefWidth="113.5999755859375" text="Id Canal" />
+                              <TableColumn fx:id="atribut_Pret" prefWidth="66.4000244140625" text="Pret" />
+                              <TableColumn fx:id="atribut_NumeCA" prefWidth="85.5999755859375" text="Nume Client" />
+                              <TableColumn fx:id="atribut_NumeCaA" prefWidth="133.5999755859375" text="Nume Canal" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="text_idAbonament" layoutX="39.0" layoutY="353.0" promptText="Id Abonament" />
+                        <Button fx:id="buton_stergeAbonament" layoutX="593.0" layoutY="441.0" mnemonicParsing="false" onAction="#stergeAbonament" text="Sterge abonament" />
+                        <TextField fx:id="text_NumeAb" layoutX="201.0" layoutY="353.0" promptText="Nume Abonament" />
+                        <TextField fx:id="text_Pret" layoutX="688.0" layoutY="353.0" promptText="Pretul abonamentului" />
+                        <TextField fx:id="text_idClientAb" layoutX="366.0" layoutY="353.0" promptText="Id Client" />
+                        <TextField fx:id="text_idCanalAb" layoutX="529.0" layoutY="353.0" promptText="Id Canal" />
+                        <Button fx:id="buton_adaugaAbonament" layoutX="120.0" layoutY="441.0" mnemonicParsing="false" onAction="#adaugaAbonament" text="Adauga abonament" />
+                        <Button fx:id="buton_modificaAbonament" layoutX="389.0" layoutY="441.0" mnemonicParsing="false" onAction="#modificaAbonament" text="Modifica abonament" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
