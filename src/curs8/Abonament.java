@@ -3,10 +3,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-/**
-*
-* @author vali
-*/
+
 public class Abonament {
  private final IntegerProperty idAbonament;
  private final StringProperty NumeAb;
