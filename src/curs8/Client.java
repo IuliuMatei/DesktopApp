@@ -3,10 +3,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-/**
-*
-* @author vali
-*/
+
 public class Client {
  private final IntegerProperty idClient;
  private final StringProperty Nume;
