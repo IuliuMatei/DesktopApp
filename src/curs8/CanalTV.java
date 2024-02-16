@@ -3,10 +3,7 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-/**
-*
-* @author vali
-*/
+
 public class CanalTV {
  private final IntegerProperty idCanalTV;
  private final StringProperty NumeCa;
